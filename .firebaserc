@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "production": "weather-station-iot-170004",
+    "staging": "itracking-project-firebase"
+  }
+}

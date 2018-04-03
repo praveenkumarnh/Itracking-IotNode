@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heart Rate</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+  <style>
+     :root {
+      --mdc-theme-primary: #0e4ead;
+      --mdc-theme-background: #E0E0E0;
+    }
+
+    main {
+      margin: 0px auto;
+    }
+
+    .mdc-card {
+      margin-bottom: 20px;
+      padding: 8px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <span class="mdc-toolbar__title">Heart Rate - Cloud IoT Core</span>
+      </section>
+      <!--
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+          <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">more_vert</a>
+        </section>
+      -->
+    </div>
+  </header>
+
+  <main style='margin-top:100px' id='heart-rate'>
+    This is the heart rate:
+
+  </main>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAO_ZoWvCrQiu0AT6kdn35O3MdJZqJf91k",
+    authDomain: "itracking-project-firebase.firebaseapp.com",
+    databaseURL: "https://itracking-project-firebase.firebaseio.com",
+    projectId: "itracking-project-firebase",
+    storageBucket: "itracking-project-firebase.appspot.com",
+    messagingSenderId: "769082807826"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+<script src="firebase-connect.js"></script>
+
+</body>
+
+</html>
