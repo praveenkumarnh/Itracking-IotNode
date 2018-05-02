@@ -8,7 +8,7 @@ admin.initializeApp(functions.config().firebase);
 const db = admin.database();
 
 /**
- * Receive data from pubsub, then 
+ * Receive data from pubsub, then
  * Write telemetry raw data to bigquery
  * Maintain last data on firebase realtime database
  */
@@ -21,8 +21,7 @@ exports.receiveTelemetry = functions.pubsub
     const deviceId = attributes['deviceId'];
 
     const data = {
-      heart: message.heart,
-      temp: '15',
+      card: message.card,
       deviceId: deviceId,
       timestamp: event.timestamp
     };
@@ -33,13 +32,13 @@ exports.receiveTelemetry = functions.pubsub
     ]);
   });
 
-/** 
+/**
  * Maintain last status in firebase
 */
 function updateCurrentDataFirebase(data) {
   return db.ref(`/devices/${data.deviceId}`).set({
-    heart: data.heart,
-    temp: data.temp,
+    card: data.card,
+    timeStamp: data.timestamp,
     lastTimestamp: data.timestamp
   });
 }

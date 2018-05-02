@@ -1,2 +1,0 @@
-config_schema:
-  - ["app.dht", "i", 4, { title: "DHT pin"}]

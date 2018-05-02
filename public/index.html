@@ -4,54 +4,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Heart Rate</title>
+  <title>Student Bus monitoring</title>
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-
-  <style>
-     :root {
-      --mdc-theme-primary: #0e4ead;
-      --mdc-theme-background: #E0E0E0;
-    }
-
-    main {
-      margin: 0px auto;
-    }
-
-    .mdc-card {
-      margin-bottom: 20px;
-      padding: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
-  <header class="mdc-toolbar mdc-toolbar--fixed">
-    <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <span class="mdc-toolbar__title">Heart Rate - Cloud IoT Core</span>
-      </section>
-      <!--
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-          <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">more_vert</a>
-        </section>
-      -->
+
+
+
+<div class="container">
+  <div id='student_1' class="profile">
+    <div id="overlay">
+      <ul class="nav">
+        <li><a href="https://twitter.com/juliepark"  target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+        <li><a href="https://instagram.com/julieparkim"  target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://github.com/jspark721"  target="_blank"><i class="fab fa-github"></i> Github</a></li>
+        <li><a href="https://codepen.io/juliepark"  target="_blank"><i class="fab fa-codepen"></i> Codepen</a></li>
+        <li><a href="https://www.linkedin.com/in/juliepark721/"  target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      </ul>
     </div>
-  </header>
+    <div class="top">
+      <div class="menu">
+        <div class="bar click-top"></div>
+        <div class="bar click-middle"></div>
+        <div class="bar click-bottom"></div>
+      </div>
+    </div>
+    <div class="bottom">
+      <h1>Phan Thanh Huy</h1>
+      <h2>SV mẫu giáo ABC</h2>
+      <p><i class="fas fa-location-arrow"></i>Chuyến xe: T0001</p>
+      <div class="line"></div>
+      <p>ads</p>
+      <button class="loginTime margin-left">Not yet</button>
+      <button>Not yet</button>
+    </div>
+  </div>
+</div>
 
-  <main style='margin-top:100px' id='heart-rate'>
-    This is the heart rate:
 
-  </main>
+
+
 
 
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script>
-    
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAO_ZoWvCrQiu0AT6kdn35O3MdJZqJf91k",
@@ -62,11 +62,25 @@
     messagingSenderId: "769082807826"
   };
   firebase.initializeApp(config);
-
 </script>
+<script src="js/firebase-connect.js"></script>
 
-<script src="firebase-connect.js"></script>
 
+<!-- jQuery 3 -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="js/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"> </script>
+
+<script>
+
+    $(".menu").click(function(){
+        $(this).toggleClass("open");
+        $("#overlay").toggleClass("view");
+
+    });
+</script>
 </body>
 
 </html>
